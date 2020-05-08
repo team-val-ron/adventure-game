@@ -18,15 +18,10 @@ public class Game {
         }
     }
     public static byte health = 5; // this makes variable public to other methods.
+    public static byte potion = 3;
+    public static boolean key = false;
 
-    public static void pickRoom(Scanner input, byte choice) {
-        byte potion = 3;
-        boolean key = false;
-//        byte health = 5;
-        health(input, health);
-    }
-
-    public static void health(Scanner input, byte health) {
+    public static void pickRoom(Scanner input) {
         byte choice = 0;
         byte room1 = 1;
         byte room2 = 2;
@@ -36,7 +31,7 @@ public class Game {
             byte pickRoom = input.nextByte();
             if (pickRoom == room1) {
                 System.out.println("You are in room 1");
-                pickRoom(input, choice);
+                pickRoom(input);
             } else if (pickRoom == room2) {
                 System.out.println("You are in room 2");
                 System.out.println("This is the kitchen. Do you want to make a potion?");
@@ -47,13 +42,13 @@ public class Game {
                     System.out.println("Making Potion!");
                     health++;
                     System.out.println("Your health is: " + health);
-                    pickRoom(input, choice);
+                    pickRoom(input);
                 } else {
                     System.out.println("You are leaving");
                     System.out.println("You are back in the main lobby.");
-                    pickRoom(input, choice);
+                    pickRoom(input);
                 }
-                pickRoom(input, choice);
+                pickRoom(input);
             } else if (pickRoom == room3) {
                 System.out.println("You are in room 3");
                 System.out.println("There is a big spider in the room. What do you want to do?");
@@ -65,9 +60,9 @@ public class Game {
                 } else {
                     System.out.println("You are running!");
                     System.out.println("You are back in the main lobby.");
-                    pickRoom(input, choice);
+                    pickRoom(input);
                 }
-                pickRoom(input, choice);
+                pickRoom(input);
             } else {
                 if (key == true) {
                     System.out.println("Open door.");
@@ -79,4 +74,5 @@ public class Game {
         }
         System.out.println("You Died!");
     }
+
 }
