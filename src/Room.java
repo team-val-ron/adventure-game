@@ -41,16 +41,8 @@ public class Room {
                 System.out.println("---------------------");
                 System.out.println();
             } else if(user == 5) {
-                System.out.println("You found your friend!");
-                System.out.println("----------------------");
-                System.out.println("\n" +
-                        "____    ____  ______    __    __     ____    __    ____  __  .__   __.  __  \n" +
-                        "\\   \\  /   / /  __  \\  |  |  |  |    \\   \\  /  \\  /   / |  | |  \\ |  | |  | \n" +
-                        " \\   \\/   / |  |  |  | |  |  |  |     \\   \\/    \\/   /  |  | |   \\|  | |  | \n" +
-                        "  \\_    _/  |  |  |  | |  |  |  |      \\            /   |  | |  . `  | |  | \n" +
-                        "    |  |    |  `--'  | |  `--'  |       \\    /\\    /    |  | |  |\\   | |__| \n" +
-                        "    |__|     \\______/   \\______/         \\__/  \\__/     |__| |__| \\__| (__) \n" +
-                        "                                                                            \n");
+                Win result = new Win();
+                result.resultWin(user);
             }
             return enterRoom(min, max);
         }
