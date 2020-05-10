@@ -10,6 +10,8 @@ public class Backpack {
     }
 
     public String[] addToBackPack(String[] add) {
+        String[] addToBag = add;
+        // goal is to be able to have the user add items to their backpack
         return add;
     }
 }
