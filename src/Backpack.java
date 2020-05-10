@@ -2,7 +2,7 @@ public class Backpack {
     private String[] backpack = {};
 
     public String[] getBackpack() {
-        return backpack;
+        return this.backpack;
     }
 
     public void setBackpack(String[] backpack) {
