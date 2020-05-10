@@ -25,7 +25,6 @@ public class Room {
                 System.out.println();
             }
             if(user == 1) {
-
                 System.out.println("You are in the living room.");
                 System.out.println("---------------------------");
                 System.out.println();
@@ -52,16 +51,6 @@ public class Room {
                         "    |  |    |  `--'  | |  `--'  |       \\    /\\    /    |  | |  |\\   | |__| \n" +
                         "    |__|     \\______/   \\______/         \\__/  \\__/     |__| |__| \\__| (__) \n" +
                         "                                                                            \n");
-            } else {
-                System.out.println("Better luck next time pal!!");
-                System.out.println("\n" +
-                        " __        ______        _______. _______ .______      \n" +
-                        "|  |      /  __  \\      /       ||   ____||   _  \\     \n" +
-                        "|  |     |  |  |  |    |   (----`|  |__   |  |_)  |    \n" +
-                        "|  |     |  |  |  |     \\   \\    |   __|  |      /     \n" +
-                        "|  `----.|  `--'  | .----)   |   |  |____ |  |\\  \\----.\n" +
-                        "|_______| \\______/  |_______/    |_______|| _| `._____|\n" +
-                        "                                                       \n");
             }
             return enterRoom(min, max);
         }
