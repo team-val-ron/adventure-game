@@ -43,6 +43,9 @@ public class Room {
             } else if(user == 5) {
                 Win result = new Win();
                 result.resultWin(user);
+            } else {
+                Lose result = new Lose();
+                result.resultLost(user);
             }
             return enterRoom(min, max);
         }

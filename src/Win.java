@@ -5,8 +5,8 @@ public class Win {
         return this.Win;
     }
 
-    public void setWin(byte winOrLose) {
-        this.Win = winOrLose;
+    public void setWin(byte win) {
+        this.Win = win;
     }
 
     public byte resultWin(byte result) {
