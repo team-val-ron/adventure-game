@@ -18,6 +18,9 @@ public class Room {
         byte user = input.nextByte();
 
         while(true) {
+            // feel free to change the context
+            // this was just a template to make sure everything was working.
+            // and according to my calculations everything is looking good.
             if (user >= min && user <= max) {
                 System.out.println();
             } else {

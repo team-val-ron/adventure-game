@@ -1,4 +1,5 @@
 public class Backpack {
+    //this doesn't work yet.
     private String[] backpack = {};
 
     public String[] getBackpack() {
