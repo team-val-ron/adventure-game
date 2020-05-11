@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Room {
     Scanner input = new Scanner(System.in);
+    Battle fight = new Battle();
 
     private byte pickRoom;
 
@@ -14,6 +15,11 @@ public class Room {
     }
 
     public byte enterRoom(byte min, byte max) {
+        if(fight.getSpiderHP() <= 0) {
+            System.out.println(("/╲/\\╭(✖╭╮✖)╮/\\╱\\"));
+        }
+        System.out.print("UserHP " + fight.getUserHP());
+        System.out.println(" Monster HP " + fight.getSpiderHP());
         System.out.println("Select a room from " + min + " to " + max);
         byte user = input.nextByte();
 
@@ -36,9 +42,16 @@ public class Room {
                 System.out.println("-----------------------");
                 System.out.println();
             } else if(user == 3) {
+                if(fight.getSpiderHP() <= 0) {
+                    System.out.println(("/╲/\\╭(✖╭╮✖)╮/\\╱\\"));
+                    enterRoom(min, max);
+                }
                 System.out.println("You are in the bathroom");
                 System.out.println("-----------------------");
-                System.out.println();
+                System.out.println(("/╲/\\╭[☉﹏☉]╮/\\╱\\"));
+                fight.setMonsterHP();
+                fight.setUserHP();
+                enterRoom(min, max);
             } else if(user == 4) {
                 System.out.println("You are in the garage");
                 System.out.println("---------------------");
