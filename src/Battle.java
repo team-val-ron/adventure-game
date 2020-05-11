@@ -3,8 +3,18 @@ import java.util.Scanner;
 public class Battle {
 
     Scanner input = new Scanner(System.in);
-    byte userHP = 5;
-    byte spiderHP = 2;
+    private byte userHP = 5;
+    private byte spiderHP = 2;
+    private boolean key = false;
+
+
+    public void setKey() {
+        this.key = true;
+    }
+
+    public boolean getKey() {
+        return this.key;
+    }
 
     public byte getUserHP() {
         return this.userHP;
@@ -21,10 +31,6 @@ public class Battle {
     }
 
     public void setMonsterHP () {
-        if(getSpiderHP() <= 0) {
-            System.out.println(("/╲/\\╭(✖╭╮✖)╮/\\╱\\"));
-            return;
-        }
         byte damage = randomDamage();
         this.spiderHP -= damage;
         System.out.println("You inflicted " + damage + " to the spider.");

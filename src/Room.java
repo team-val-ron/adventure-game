@@ -17,6 +17,8 @@ public class Room {
     public byte enterRoom(byte min, byte max) {
         if(fight.getSpiderHP() <= 0) {
             System.out.println(("/╲/\\╭(✖╭╮✖)╮/\\╱\\"));
+            System.out.println("You received a key from the spider");
+            fight.setKey();
         }
         System.out.print("UserHP " + fight.getUserHP());
         System.out.println(" Monster HP " + fight.getSpiderHP());
@@ -45,20 +47,25 @@ public class Room {
                 if(fight.getSpiderHP() <= 0) {
                     System.out.println(("/╲/\\╭(✖╭╮✖)╮/\\╱\\"));
                     enterRoom(min, max);
+                } else {
+                    System.out.println("You are in the bathroom");
+                    System.out.println("-----------------------");
+                    System.out.println(("/╲/\\╭[☉﹏☉]╮/\\╱\\"));
+                    fight.setMonsterHP();
+                    fight.setUserHP();
+                    enterRoom(min, max);
                 }
-                System.out.println("You are in the bathroom");
-                System.out.println("-----------------------");
-                System.out.println(("/╲/\\╭[☉﹏☉]╮/\\╱\\"));
-                fight.setMonsterHP();
-                fight.setUserHP();
-                enterRoom(min, max);
             } else if(user == 4) {
                 System.out.println("You are in the garage");
                 System.out.println("---------------------");
                 System.out.println();
             } else if(user == 5) {
-                Win result = new Win();
-                result.resultWin(user);
+                if(fight.getKey()) {
+                    Win result = new Win();
+                    result.resultWin(user);
+                }
+                System.out.println("Room is locked");
+                enterRoom(min, max);
             } else {
                 Lose result = new Lose();
                 result.resultLost(user);
