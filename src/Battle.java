@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Battle {
 
     Scanner input = new Scanner(System.in);
-    private byte userHP = 1;
+    private byte userHP = 5;
     private byte spiderHP = 5;
     private boolean key = false;
 

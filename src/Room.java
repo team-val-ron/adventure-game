@@ -17,6 +17,7 @@ public class Room {
 
     public byte enterRoom(byte min, byte max) {
         if(fight.getSpiderHP() <= 0) {
+            System.out.println("You defeated the spider");
             System.out.println(("/╲/\\╭(✖╭╮✖)╮/\\╱\\"));
             System.out.println("You received a key from the spider");
             fight.setKey();
@@ -61,10 +62,6 @@ public class Room {
                 System.out.println();
                 enterRoom(min, max);
             } else if(user == 3) {
-                if(fight.getSpiderHP() <= 0) {
-                    System.out.println(("/╲/\\╭(✖╭╮✖)╮/\\╱\\"));
-                    enterRoom(min, max);
-                } else {
                     System.out.println("███████████████████████████████████████████████");
                     System.out.println("██           You are in the bathroom         ██");
                     System.out.println("██         A big scary spider appears!!      ██");
@@ -86,7 +83,7 @@ public class Room {
                         enterRoom(min, max);
                     }
 
-                }
+
             } else if(user == 4) {
                 System.out.println("You are in the garage");
                 System.out.println("---------------------");
