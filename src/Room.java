@@ -21,6 +21,10 @@ public class Room {
             System.out.println("You received a key from the spider");
             fight.setKey();
         }
+        if(fight.getUserHP() <= 0) {
+            Lose result = new Lose();
+            result.resultLost((byte) 0);
+        }
         System.out.print("UserHP " + fight.getUserHP());
         System.out.println(" Monster HP " + fight.getSpiderHP());
         System.out.println("Select a room from " + min + " to " + max);
