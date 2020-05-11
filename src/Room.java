@@ -48,12 +48,25 @@ public class Room {
                     System.out.println(("/╲/\\╭(✖╭╮✖)╮/\\╱\\"));
                     enterRoom(min, max);
                 } else {
-                    System.out.println("You are in the bathroom");
-                    System.out.println("-----------------------");
+                    System.out.println("███████████████████████████████████████████████");
+                    System.out.println("██           You are in the bathroom         ██");
+                    System.out.println("██         A big scary spider appears!!      ██");
+                    System.out.println("███████████████████████████████████████████████");
+                    System.out.println("███████████████████████████████████████████████");
+                    System.out.println("██           What do you want to do:         ██");
+                    System.out.println("██   1. Attack                               ██");
+                    System.out.println("██   1. Leave (Back to Main room)            ██");
+                    System.out.println("███████████████████████████████████████████████");
                     System.out.println(("/╲/\\╭[☉﹏☉]╮/\\╱\\"));
-                    fight.setMonsterHP();
-                    fight.setUserHP();
-                    enterRoom(min, max);
+                    byte choice = input.nextByte();
+                    if(choice == 1) {
+                        fight.setMonsterHP();
+                        fight.setUserHP();
+                        enterRoom(min, max);
+                    } else {
+                        enterRoom(min, max);
+                    }
+
                 }
             } else if(user == 4) {
                 System.out.println("You are in the garage");
