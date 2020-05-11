@@ -14,6 +14,19 @@ public class StartGame {
 
     public String startGame() {
         Room begin = new Room(); // call the Room class
+
+        System.out.println("██╗  ██╗██╗██████╗ ███████╗    ███╗   ██╗    ███████╗███████╗███████╗██╗  ██╗");
+        System.out.println("██║  ██║██║██╔══██╗██╔════╝    ████╗  ██║    ██╔════╝██╔════╝██╔════╝██║ ██╔╝");
+        System.out.println("███████║██║██║  ██║█████╗      ██╔██╗ ██║    ███████╗█████╗  █████╗  █████╔╝");
+        System.out.println("██╔══██║██║██║  ██║██╔══╝      ██║╚██╗██║    ╚════██║██╔══╝  ██╔══╝  ██╔═██╗");
+        System.out.println("██║  ██║██║██████╔╝███████╗    ██║ ╚████║    ███████║███████╗███████╗██║  ██╗");
+        System.out.println("╚═╝  ╚═╝╚═╝╚═════╝ ╚══════╝    ╚═╝  ╚═══╝    ╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝");
+        System.out.println(" ██████████████████████████████████████████████████████████████████████████████████████████");
+        System.out.println(" ██     You get a text from your friend to get picked up from an address.                ██");
+        System.out.println(" ██      You arrive at the address but your friend nowhere to be found, the house looks  ██");
+        System.out.println(" ██       abandoned. You hesitate but you must find you friend. <Enter house>            ██");
+        System.out.println(" ██████████████████████████████████████████████████████████████████████████████████████████");
+
         System.out.println("Start game? [y/n]");
         String user = initiate.nextLine();
         if(user.equalsIgnoreCase("y")) {

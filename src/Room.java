@@ -65,12 +65,14 @@ public class Room {
                     System.out.println("██           You are in the bathroom         ██");
                     System.out.println("██         A big scary spider appears!!      ██");
                     System.out.println("███████████████████████████████████████████████");
+                    System.out.println();
+                    System.out.println(("/╲/\\╭[☉﹏☉]╮/\\╱\\"));
+                    System.out.println();
                     System.out.println("███████████████████████████████████████████████");
                     System.out.println("██           What do you want to do:         ██");
                     System.out.println("██   1. Attack                               ██");
-                    System.out.println("██   1. Leave (Back to Main room)            ██");
+                    System.out.println("██   2. Leave (Back to Main room)            ██");
                     System.out.println("███████████████████████████████████████████████");
-                    System.out.println(("/╲/\\╭[☉﹏☉]╮/\\╱\\"));
                     byte choice = input.nextByte();
                     if(choice == 1) {
                         fight.setMonsterHP();
@@ -90,7 +92,10 @@ public class Room {
                     Win result = new Win();
                     result.resultWin(user);
                 }
-                System.out.println("Room is locked");
+                System.out.println("███████████████████████████████████████████████");
+                System.out.println("██     Hmm the door seems to be locked.      ██");
+                System.out.println("██     Maybe there is a key somewhere.       ██");
+                System.out.println("███████████████████████████████████████████████");
                 enterRoom(min, max);
             } else {
                 Lose result = new Lose();

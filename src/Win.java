@@ -17,6 +17,15 @@ public class Win {
         if(result == 5) {
             System.out.println("You found your friend!");
             System.out.println("----------------------");
+            System.out.println("_____|~~\\_____      _____________");
+            System.out.println("_-~               \\    |    \\");
+            System.out.println("_-    | )     \\    |__/   \\   \\");
+            System.out.println("_-         )   |   |  |     \\  \\");
+            System.out.println("_-    | )     /    |--|      |  |");
+            System.out.println("__-_______________ /__/_______|  |_________");
+                    System.out.println("(                |----         |  |");
+ System.out.println("`---------------'--\\\\\\\\      .`--'");
+                              System.out.println("`||||");
             System.out.println("\n" +
                     "____    ____  ______    __    __     ____    __    ____  __  .__   __.  __  \n" +
                     "\\   \\  /   / /  __  \\  |  |  |  |    \\   \\  /  \\  /   / |  | |  \\ |  | |  | \n" +
