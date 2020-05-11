@@ -29,6 +29,13 @@ public class Room {
         System.out.print("UserHP " + fight.getUserHP());
         System.out.println(" Monster HP " + fight.getSpiderHP());
         System.out.println("Select a room from " + min + " to " + max);
+        System.out.println("███████████████████████████████████████████████");
+        System.out.println("██   1. Living Room                          ██");
+        System.out.println("██   2. Kitchen                              ██");
+        System.out.println("██   3. Bathroom                             ██");
+        System.out.println("██   4. Garage                               ██");
+        System.out.println("██   5. Weird Room                           ██");
+        System.out.println("███████████████████████████████████████████████");
         byte user = input.nextByte();
 
         while(true) {
