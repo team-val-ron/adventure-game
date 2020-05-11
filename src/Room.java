@@ -5,6 +5,7 @@ public class Room {
     Battle fight = new Battle();
 
     private byte pickRoom;
+    private byte potion = 3;
 
     public byte getPickRoom() {
         return this.pickRoom;
@@ -40,9 +41,21 @@ public class Room {
                 System.out.println("---------------------------");
                 System.out.println();
             } else if(user == 2) {
-                System.out.println("You are in the kitchen.");
-                System.out.println("-----------------------");
+                if(potion > 0) {
+                    System.out.println("███████████████████████████████████████████████");
+                    System.out.println("██           You are in the kitchen          ██");
+                    System.out.println("██         You found a potion! +1 HP         ██");
+                    System.out.println("███████████████████████████████████████████████");
+                    fight.addPotion();
+                    potion--;
+                } else {
+                    System.out.println("███████████████████████████████████████████████");
+                    System.out.println("██           You are in the kitchen          ██");
+                    System.out.println("██ No more potions! But here's a sandwich!   ██");
+                    System.out.println("███████████████████████████████████████████████");
+                }
                 System.out.println();
+                enterRoom(min, max);
             } else if(user == 3) {
                 if(fight.getSpiderHP() <= 0) {
                     System.out.println(("/╲/\\╭(✖╭╮✖)╮/\\╱\\"));

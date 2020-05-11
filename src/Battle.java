@@ -16,6 +16,10 @@ public class Battle {
         return this.key;
     }
 
+    public void addPotion() {
+        this.userHP++;
+    }
+
     public byte getUserHP() {
         return this.userHP;
     }
